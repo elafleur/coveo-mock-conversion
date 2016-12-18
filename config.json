@@ -1,0 +1,18 @@
+{
+    "envProvider": "local",
+    "env": {
+        "local": "samples/env.sample-documents.json",
+        "cloud": {
+            "sourceid": "kdwboswbfnug3",
+            "syssource": "Lithium - https://acme.test.lithium.com/",
+            "workgroup": "acmenonprod",
+            "token": "dd89dbc4-c0e8-48d7-94b2-03f79e9de36e",
+            "customScripts": [
+                "SCRIPT_Folding"
+            ]
+        }
+    },
+    "localScripts": [
+        "samples/custom-script.sample.js"
+    ]
+}

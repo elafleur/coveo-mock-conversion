@@ -1,15 +1,24 @@
 {
-  "name": "coveo-mock-conversion",
-  "version": "1.0.0",
-  "description": "tool used for mocking post conversion script",
-  "main": "mocking-script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "jfallaire",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "^2.9.0",
-    "underscore": "^1.8.3"
-  }
+    "name": "coveo-mock-conversion",
+    "version": "0.2.0",
+    "description": "Tool used for mocking post conversion scripts",
+    "main": "mock-conversion.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "jfallaire & elafleur",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jfallaire/coveo-mock-conversion"
+    },
+    "license": "Apache-2.0",
+    "bugs": "https://github.com/jfallaire/coveo-mock-conversion/issues",
+    "dependencies": {
+        "commander": "^2.9.0",
+        "prettyjson": "^1.2.1",
+        "prompt": "^1.0.0",
+        "request": "^2.79.0",
+        "underscore": "^1.8.3",
+        "uuid-validate": "0.0.2"
+    }
 }
