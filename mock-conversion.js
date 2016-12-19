@@ -61,9 +61,9 @@ program.parse(process.argv);
 if (typeof configValue === 'undefined') {
   var fieldsPromise = retriever.getSourceFields();
 
-  fieldsPromise.then(function(fields) {
+  fieldsPromise.then((fields) => {
     convert(fields, program.showBody);
-  }, function(err) {
+  }, (err) => {
     console.error(err.message);
   });
 } else {
@@ -75,7 +75,7 @@ if (typeof configValue === 'undefined') {
         var fields = {};
 
         fields.env = JSON.parse(fs.readFileSync(conf.env.local));
-        fields.scripts = _.map(conf.localScripts, function(script) {
+        fields.scripts = _.map(conf.localScripts, (script) => {
           return fs.readFileSync(script);
         });
 
@@ -84,15 +84,15 @@ if (typeof configValue === 'undefined') {
       case 'cloud':
         var fieldsPromise = retriever.getSourceFields(conf.env.cloud);
 
-        fieldsPromise.then(function(fields) {
+        fieldsPromise.then((fields) => {
           // add local scripts if any
-          var localScripts = _.map(conf.localScripts, function(script) {
+          var localScripts = _.map(conf.localScripts, (script) => {
             return fs.readFileSync(script);
           });
 
           Array.prototype.push.apply(fields.scripts, localScripts);
           convert(fields, program.showBody);
-        }, function(err) {
+        }, (err) => {
           console.error(err.message);
         });
         break;
