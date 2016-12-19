@@ -63,7 +63,7 @@ if (typeof configValue === 'undefined') {
 
   fieldsPromise.then(function(fields) {
     convert(fields, program.showBody);
-  }).catch(function(err) {
+  }, function(err) {
     console.error(err.message);
   });
 } else {
@@ -92,7 +92,7 @@ if (typeof configValue === 'undefined') {
 
           Array.prototype.push.apply(fields.scripts, localScripts);
           convert(fields, program.showBody);
-        }).catch(function(err) {
+        }, function(err) {
           console.error(err.message);
         });
         break;
